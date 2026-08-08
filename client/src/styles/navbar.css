@@ -1,0 +1,280 @@
+/* =========================================
+   SkillSync Premium Glassmorphism Navbar
+========================================= */
+
+.navbar {
+  height: 90px;
+  padding: 0 42px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* Glass */
+  background: rgba(10, 20, 55, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Border */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+
+  /* 3D shadow */
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(99, 102, 241, 0.12);
+
+  color: white;
+}
+
+
+/* =========================================
+   Logo
+========================================= */
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+
+  margin: 0;
+
+  cursor: pointer;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #c084fc,
+    #60a5fa
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.35));
+
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.04);
+
+  filter:
+    drop-shadow(0 0 8px rgba(168, 85, 247, 0.7))
+    drop-shadow(0 0 18px rgba(59, 130, 246, 0.5));
+}
+
+
+/* =========================================
+   Navigation
+========================================= */
+
+.nav-links {
+  display: flex;
+
+  list-style: none;
+
+  gap: 12px;
+
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================
+   Navigation Links
+========================================= */
+
+.nav-links a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 11px 17px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  border-radius: 12px;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+  color: white;
+
+  background: rgba(139, 92, 246, 0.16);
+
+  box-shadow:
+    inset 0 0 12px rgba(139, 92, 246, 0.12),
+    0 0 14px rgba(139, 92, 246, 0.12);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   Active Link
+========================================= */
+
+.nav-links a.active {
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.65),
+    rgba(59, 130, 246, 0.38)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    0 0 15px rgba(139, 92, 246, 0.35),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================
+   Active Glow Line
+========================================= */
+
+.nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 20%;
+  right: 20%;
+  bottom: 4px;
+
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #a855f7,
+    #38bdf8
+  );
+
+  box-shadow:
+    0 0 8px #a855f7,
+    0 0 15px #38bdf8;
+}
+
+
+/* =========================================
+   Logout Button
+========================================= */
+
+.logout-btn {
+  margin-left: 8px;
+
+  padding: 11px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #ef4444,
+    #ec4899
+  );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 18px rgba(239, 68, 68, 0.3);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+
+/* Logout Hover */
+
+.logout-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+
+  filter: brightness(1.08);
+
+  box-shadow:
+    0 7px 22px rgba(239, 68, 68, 0.5),
+    0 0 15px rgba(236, 72, 153, 0.3);
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 27px;
+  }
+
+  .nav-links {
+    gap: 4px;
+  }
+
+  .nav-links a {
+    padding: 9px 11px;
+    font-size: 14px;
+  }
+
+  .logout-btn {
+    padding: 9px 13px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .navbar {
+    height: auto;
+    min-height: 80px;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
