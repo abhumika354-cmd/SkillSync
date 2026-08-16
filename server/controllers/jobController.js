@@ -208,8 +208,7 @@ exports.updateJob = async (req, res) => {
 exports.getMatchScore = async (req, res) => {
   try {
 
-    const User = require("../models/User");
-
+    const User = require("../models/user");
     const job = await Job.findById(req.params.id);
     const user = await User.findById(req.user._id);
 

@@ -1,7 +1,6 @@
 const streamifier = require("streamifier");
 const cloudinary = require("../config/cloudinary");
-const User = require("../models/User");
-
+const User = require("../models/user");
 // =========================
 // Upload Resume
 // =========================
