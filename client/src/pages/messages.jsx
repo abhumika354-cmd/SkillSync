@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../styles/Messages.css";
+import "../styles/messages.css";
 
 function Messages() {
   const [loading, setLoading] = useState(true);

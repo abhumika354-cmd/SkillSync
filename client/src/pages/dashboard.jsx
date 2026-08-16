@@ -4,7 +4,7 @@ import { getProfile } from "../services/userService";
 import { getMyApplications } from "../services/applicationService";
 import { getSavedJobs } from "../services/savedJobService";
 import { getJobs } from "../services/jobService";
-import "../styles/Dashboard.css";
+import "../styles/dashboard.css";
 import { Link } from "react-router-dom";
 
 
